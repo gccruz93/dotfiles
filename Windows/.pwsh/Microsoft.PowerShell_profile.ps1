@@ -17,6 +17,12 @@ function goto {
     )
 
     Switch ($location) {
+        "pwsh" {
+            Set-Location -Path "$home/.config/powershell"
+        }
+        "nvim" {
+            Set-Location -Path "$home/AppData/Local/nvim"
+        }
         "ds" {
             Set-Location -Path "D:/Datasigh/Projetos/www"
         }

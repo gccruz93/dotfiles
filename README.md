@@ -1,3 +1,15 @@
+```
+## Windows
+
+### PowerShell
+> mkdir $home\.config\pwsh
+> ln -s -f $home\.dotfiles\Windows\pwsh\user_profile.ps1 $home\.config\pwsh\user_profile.ps1
+> mkdir $home\Documents\PowerShell
+> ln -s -f $home\.dotfiles\Windows\WindowsTerminal\Microsoft.PowerShell_profile.ps1 $home\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+copy $home/.dotfiles/Windows/WindowsTerminal/settings.json
+```
+
+## Libs
 - [`zsh`](https://github.com/zsh-users/zsh) - Highly customizable interactive login shell and command interpreter for shell scripting
   - [`pure`](https://github.com/kutsan/pure) - Minimal and fast Zsh prompt with asynchronous git fetch
   - [`autopair`](https://github.com/hlissner/zsh-autopair) - Auto-close and delete matching delimiters

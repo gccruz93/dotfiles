@@ -1,15 +1,16 @@
 # $env:USERPROFILE\Documents\PowerShell
-#. $env:USERPROFILE\.config\powershell\user_profile.ps1
+#. $env:USERPROFILE\.config\pwsh\user_profile.ps1
 
 # Alias
 Set-Alias vim nvim
-Set-Alias ll ls
+Set-Alias l ls
 Set-Alias g git
+Set-Alias .. cd .
 Set-Alias grep findstr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 
-New-Alias gt goto
+New-Alias go goto
 
 function goto {
     param (
@@ -18,7 +19,7 @@ function goto {
 
     Switch ($location) {
         "pwsh" {
-            Set-Location -Path "$home/.config/powershell"
+            Set-Location -Path "$home/.config/pwsh"
         }
         "nvim" {
             Set-Location -Path "$home/AppData/Local/nvim"

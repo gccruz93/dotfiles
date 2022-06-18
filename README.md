@@ -1,24 +1,66 @@
 
 ## Windows Setup
 
-### PowerShell
+### Packages
+`Scoop (Package manager)`
+```
+iwr -useb get.scoop.sh | iex
+```
+`Git`
+```
+winget install -e --id Git.Git
+```
+`Neovim`
+```
+scoop install neovim gcc
+```
+`Node`
+```
+scoop install nvm
+```
 
+### PowerShell
+`Config files`
 ```
 mkdir $home\.config\pwsh
 ```
 ```
-ln -s -f $home\.dotfiles\Windows\pwsh\user_profile.ps1 $home\.config\pwsh\user_profile.ps1
+ln -s -f $home\.dotfiles\Windows\pwsh\gccruz93.ps1 $home\.config\pwsh\gccruz93.ps1
 ```
+`Setting $PROFILE dir`
 ```
 mkdir $home\Documents\PowerShell
 ```
 ```
-ln -s -f $home\.dotfiles\Windows\WindowsTerminal\Microsoft.PowerShell_profile.ps1
+ln -s -f $home\.dotfiles\Windows\WindowsTerminal\Microsoft.PowerShell_profile.ps1 $home\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 ```
-
-`$home\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`
-<br>
 `copy $home/.dotfiles/Windows/WindowsTerminal/settings.json`
+<br>
+<br>
+`Style`
+```
+scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+```
+```
+ln -s -f $home\.dotfiles\Windows\pwsh\gccruz93.omp.json $home\.config\pwsh\gccruz93.omp.json
+```
+`Icons`
+```
+Install-Module -Name Terminal-Icons -Repository PSGallery -Force
+```
+`z Directory Jumper`
+```
+Install-Module -Name z -Force
+```
+`PSReadline - Autocompletition`
+```
+Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+```
+`Fzf - Fuzzy Finder`
+```
+scoop install fzf
+Install-Module -Name PSFzf -Scope CurrentUser -Force
+```
 
 ## Debian Setup
 ```

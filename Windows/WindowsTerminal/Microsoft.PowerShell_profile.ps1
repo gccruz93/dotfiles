@@ -1,1 +1,1 @@
-. $env:USERPROFILE\.config\pwsh\user_profile.ps1
+. $env:USERPROFILE\.config\pwsh\gccruz93.ps1

@@ -1,12 +1,35 @@
-```
-## Windows
+
+## Windows Setup
 
 ### PowerShell
-> mkdir $home\.config\pwsh
-> ln -s -f $home\.dotfiles\Windows\pwsh\user_profile.ps1 $home\.config\pwsh\user_profile.ps1
-> mkdir $home\Documents\PowerShell
-> ln -s -f $home\.dotfiles\Windows\WindowsTerminal\Microsoft.PowerShell_profile.ps1 $home\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
-copy $home/.dotfiles/Windows/WindowsTerminal/settings.json
+
+```
+mkdir $home\.config\pwsh
+```
+```
+ln -s -f $home\.dotfiles\Windows\pwsh\user_profile.ps1 $home\.config\pwsh\user_profile.ps1
+```
+```
+mkdir $home\Documents\PowerShell
+```
+```
+ln -s -f $home\.dotfiles\Windows\WindowsTerminal\Microsoft.PowerShell_profile.ps1
+```
+
+`$home\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`
+<br>
+`copy $home/.dotfiles/Windows/WindowsTerminal/settings.json`
+
+## Debian Setup
+```
+sudo apt-get update && sudo apt-get upgrade -y
+```
+```
+sudo apt install git curl -y
+```
+`https://github.com/nodesource/distributions/blob/master/README.md`
+```
+sudo apt install zsh -y
 ```
 
 ## Libs

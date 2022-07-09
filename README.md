@@ -34,53 +34,14 @@ mkdir $home\Documents\PowerShell
 ```
 ln -s -f $home\.dotfiles\Windows\WindowsTerminal\Microsoft.PowerShell_profile.ps1 $home\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 ```
-`copy $home/.dotfiles/Windows/WindowsTerminal/settings.json`
 <br>
 <br>
-`Style`
-```
-scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
-```
-```
-ln -s -f $home\.dotfiles\Windows\pwsh\gccruz93.omp.json $home\.config\pwsh\gccruz93.omp.json
-```
 `Icons`
 ```
 Install-Module -Name Terminal-Icons -Repository PSGallery -Force
 ```
-`z Directory Jumper`
-```
-Install-Module -Name z -Force
-```
-`PSReadline - Autocompletition`
-```
-Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
-```
-`Fzf - Fuzzy Finder`
-```
-scoop install fzf
-Install-Module -Name PSFzf -Scope CurrentUser -Force
-```
-
-## Debian Setup
-```
-sudo apt-get update && sudo apt-get upgrade -y
-```
-```
-sudo apt install git curl -y
-```
-`https://github.com/nodesource/distributions/blob/master/README.md`
-```
-sudo apt install zsh -y
-```
 
 ## Libs
-- [`zsh`](https://github.com/zsh-users/zsh) - Highly customizable interactive login shell and command interpreter for shell scripting
-  - [`pure`](https://github.com/kutsan/pure) - Minimal and fast Zsh prompt with asynchronous git fetch
-  - [`autopair`](https://github.com/hlissner/zsh-autopair) - Auto-close and delete matching delimiters
-  - [`system-clipboard`](https://github.com/kutsan/zsh-system-clipboard) - Synchronize ZLE clipboard buffer with system clipboard
-  - [`fast-syntax-highlighting`](https://github.com/kutsan/fast-syntax-highlighting) - Fish-like syntax highlighting support for interactive terminal
-  - [`autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Fish-like auto-suggestions for interactive terminal based on command history
 - [`neovim`](https://github.com/neovim/neovim) - The fork of ubiquitous text editor focused on extensibility and usability
   - [`autopairs`](https://github.com/windwp/nvim-autopairs) - Auto pair plugin
   - [`bufferline`](https://github.com/akinsho/nvim-bufferline.lua) - Bufferline

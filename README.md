@@ -34,11 +34,13 @@ mkdir $home\Documents\PowerShell
 ```
 ln -s -f $home\.dotfiles\Windows\WindowsTerminal\Microsoft.PowerShell_profile.ps1 $home\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 ```
-<br>
-<br>
 `Icons`
 ```
 Install-Module -Name Terminal-Icons -Repository PSGallery -Force
+```
+`PSReadLine`
+```
+pwsh.exe -noprofile -command "Install-Module PSReadLine -Force -AllowPrerelease -SkipPublisherCheck" 
 ```
 
 ## Libs
